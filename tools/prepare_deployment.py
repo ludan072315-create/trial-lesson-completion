@@ -29,7 +29,7 @@ def prepare(source, data_end, formal_data_end):
     incoming = source.read_text(encoding='utf-8')
     if '__CLASS_CSV__' in incoming or 'id="class-csv"' not in incoming or 'id="formal-class-csv"' not in incoming:
         raise SystemExit('Source is not a rendered completion dashboard')
-    history = '<a href="https://rosannabebe.github.io/trial-lesson-completion/archive/" style="color:inherit">历史版本 / History</a>'
+    history = '<a href="https://ludan072315-create.github.io/trial-lesson-completion/archive/" style="color:inherit">历史版本 / History</a>'
     if history not in incoming:
         incoming = incoming.replace('</body>', f'<footer style="padding:24px;text-align:center">{history}</footer>\n</body>')
     updated = incoming.encode('utf-8')
